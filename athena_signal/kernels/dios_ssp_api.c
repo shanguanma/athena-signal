@@ -237,7 +237,7 @@ int dios_ssp_process_api(void* ptr, short* mic_buf, short* ref_buf, short* out_b
     }
 
     // begin signal processing: HPF + AEC + Beamforming + VAD + NS + AGC
-    // more detail signal processing: HPF ->AEC ->DOA ->MVDR Beamforming -> GSC -> VAD -> NS -> AGC 
+    // more detail signal processing: HPF ->AEC ->DOA ->Beamforming(MVDR/GSC) -> VAD -> NS -> AGC 
     // hpf process
     if(SSP_PARAM->HPF_KEY == 1)
     {
